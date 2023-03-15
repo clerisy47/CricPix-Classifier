@@ -17,13 +17,7 @@ def image_scrap(search_query, num_of_images):
             f.write(response.content)
 
 
-players_list = ["Sachin Tendulkar", "Virat Kohli", "Rohit Sharma", "Babar Azam", 
-                "Kane Williamson", "Steve Smith", "Joe Root", "David Warner", 
-                "Shakib Al Hasan", "Ross Taylor", "Jasprit Bumrah", "Jofra Archer", 
-                "Mitchell Starc", "Trent Boult", "Pat Cummins", "Mohammad Amir", 
-                "Bhuvneshwar Kumar", "Hardik Pandya", "Rashid Khan", "Imran Tahir", 
-                "Chris Gayle", "AB de Villiers", "Quinton de Kock", "MS Dhoni", 
-                "Rishabh Pant", "Kieron Pollard"]
+players_list = ["Sachin Tendulkar", "Virat Kohli", "Rohit Sharma", "A Be Dillers", "MS Dhoni" ]
 
 
 for player in players_list:
