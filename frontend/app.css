@@ -1,55 +1,29 @@
-.card-wrapper {
-    margin: 5% 0;
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 25vh;
   }
   
-/* You can adjust the image size by increasing/decreasing the width, height */
-.custom-circle-image {
-  width: 10vw; /* note i used vw not px for better responsive */
-  height: 10vw;
-}
-
-.custom-circle-image img {
-  object-fit: cover;
-}
-
-.card-title {
-  letter-spacing: 1.1px;
-}
-
-.card-text {
-  font-family: MerriweatherRegular;
-  font-size: 22px;
-  line-height: initial;
-}
-
-.dropzone {
+  #dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-style: dashed;
-}
-
-
-.error {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 10px;
+  }
+  
+  #submitBtn {
+  margin-top: 20px;
+  }
+  
+  .error {
   font-family: MerriweatherRegular;
   font-size: 30px;
   line-height: initial;
   color: blue;
   text-align: center;
-}
-
-#classTable {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#classTable td, #classTable th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#classTable th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
-}
+  }
