@@ -3,12 +3,26 @@ import json
 import numpy as np
 import base64
 import cv2
-from wavelet import w2d
+import pywt
 
 __class_name_to_number = {}
 __class_number_to_name = {}
 
 __model = None
+
+
+def w2d(imArray, mode='haar', level=1):
+    imArray = cv2.cvtColor( imArray,cv2.COLOR_RGB2GRAY )
+    imArray =  np.float32(imArray)
+    imArray /= 255
+    coeffs=pywt.wavedec2(imArray, mode, level=level)
+    coeffs_H=list(coeffs)
+    coeffs_H[0] *= 0
+    imArray_H=pywt.waverec2(coeffs_H, mode)
+    imArray_H *= 255
+    imArray_H =  np.uint8(imArray_H)
+
+    return imArray_H
 
 def classify_image(image_base64_data, file_path=None):
 
