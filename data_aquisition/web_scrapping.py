@@ -17,7 +17,7 @@ def image_scrap(search_query, num_of_images):
             f.write(response.content)
 
 
-players_list = ["Sachin Tendulkar", "Virat Kohli", "Rohit Sharma", "A Be Dillers", "MS Dhoni" ]
+players_list = ["Sachin_Tendulkar", "Virat_Kohli", "Rohit_Sharma", "A_Be_Dillers", "MS_Dhoni" ]
 
 
 for player in players_list:
