@@ -3,8 +3,6 @@ import time
 import urllib.request
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-
 
 def image_scrap(search_query, num_of_images):
     driver = webdriver.Chrome()
