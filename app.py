@@ -62,7 +62,8 @@ def predict():
         combined_img = np.vstack((scalled_raw_img.reshape(32*32*3,1),scalled_img_har.reshape(32*32,1)))
         combined_img = combined_img.reshape(-1, 4096)
 
-        pred =np.argmax(model.predict(combined_img))
+        pred =model.predict(combined_img)
+        print(pred)
         message = f"The image is of {key_from_value(class_dict, pred)}"
 
     return render_template("index.html", message=message)

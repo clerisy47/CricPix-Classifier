@@ -1,26 +1,37 @@
 import os
-import requests
-from bs4 import BeautifulSoup
 import time
+import urllib.request
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
 
 def image_scrap(search_query, num_of_images):
-    url = f"https://www.google.com/search?q={search_query}&tbm=isch&tbs=itp:face"
-    response = requests.get(url)
-    soup = BeautifulSoup(response.content, "html.parser")
+    driver = webdriver.Chrome()
+    driver.get(f"https://www.google.com/search?q={search_query}&tbm=isch&tbs=itp:face")
+
+    last_height = driver.execute_script("return document.body.scrollHeight")
+    while True:
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(1)
+        new_height = driver.execute_script("return document.body.scrollHeight")
+        if new_height == last_height:
+            break
+        last_height = new_height
+
+    soup = BeautifulSoup(driver.page_source, "html.parser")
     image_tags = soup.find_all("img")
+    image_urls = [tag.get("src") for tag in image_tags]
     if not os.path.exists(f"dataset/{search_query}"):
         os.mkdir(f"dataset/{search_query}")
-    for i, image_tag in enumerate(image_tags[1:num_of_images+1]):
-        image_url = image_tag.get("src")
-        response = requests.get(image_url)
-        with open(f"dataset/{search_query}/image_{i+1}.jpg", "wb") as f:
-            f.write(response.content)
+    for i, url in enumerate(image_urls[:num_of_images]):
+        filename = f"dataset/{search_query}/image_{i+1}.jpg"
+        urllib.request.urlretrieve(url, filename)
+
+    driver.quit()
 
 
-players_list = ["Sachin_Tendulkar", "Virat_Kohli", "Rohit_Sharma", "A_Be_Dillers", "MS_Dhoni" ]
-
+players_list = ["rohit_sharma", "ricky_ponting", "kumar_sangakkara", "virat_kohli", "ms_dhoni", "sachin_tendulkar"]
 
 for player in players_list:
     image_scrap(player, 100)
-    time.sleep(10)
-    
