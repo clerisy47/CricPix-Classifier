@@ -19,19 +19,6 @@ def key_from_value(dictionary, value):
     for key in dictionary:
         if dictionary[key] == value:
             return key
-
-def get_cropped_image_if_2_eyes(image_path):
-    img = cv2.imread(image_path)
-    if img is None:
-        return None
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-    for (x,y,w,h) in faces:
-        roi_gray = gray[y:y+h, x:x+w]
-        roi_color = img[y:y+h, x:x+w]
-        eyes = eye_cascade.detectMultiScale(roi_gray)
-        if len(eyes) >= 2:
-            return roi_color
         
 def w2d(imArray, mode='haar', level=1):
     imArray = cv2.cvtColor(imArray,cv2.COLOR_RGB2GRAY)
