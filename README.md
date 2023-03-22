@@ -3,21 +3,21 @@ This is a Flask web application for image recognition using a machine learning m
 
 # Installation
 
-Clone the repository and navigate to the root folder:
+Clone the repository and navigate to the root folder:  
 git clone https://github.com/yourusername/yourproject.git
 cd yourproject
 
-Create a virtual environment:
+Create a virtual environment:  
 python3 -m venv venv
 
-Activate the virtual environment:
+Activate the virtual environment:  
 On Windows:
 venv\Scripts\activate
 
-On Linux or macOS:
+On Linux or macOS:  
 source venv/bin/activate
 
-Install the dependencies:
+Install the dependencies:  
 pip install -r requirements.txt
 
 # Usage
