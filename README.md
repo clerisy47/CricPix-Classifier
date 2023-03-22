@@ -7,28 +7,32 @@ Clone the repository and navigate to the root folder:
 git clone https://github.com/yourusername/yourproject.git
 cd yourproject
 
-Create a virtual environment:  
+Create a virtual environment: 
+```terminal
 python3 -m venv venv
+```
 
 Activate the virtual environment:  
 On Windows:  
-
-```shell
+```terminal
 venv\Scripts\activate
 ```
 
 On Linux or macOS:
-
 ```terminal
 source venv/bin/activate
 ```
 
-Install the dependencies:  
+Install the dependencies: 
+```terminal
 pip install -r requirements.txt
+```
 
 # Usage
 To run the application, navigate to the root folder and execute the following command:  
+```terminal
 python app.py
+```
 Then, open a web browser and go to http://localhost:5000/.
 Upload an image and the application will predict the face in the image using the pre-trained machine learning model.
 
