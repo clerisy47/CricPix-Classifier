@@ -11,8 +11,8 @@ Create a virtual environment:
 python3 -m venv venv
 
 Activate the virtual environment:  
-On Windows:
-$ venv\Scripts\activate
+On Windows:  
+ venv\Scripts\activate
 
 On Linux or macOS:  
 source venv/bin/activate
