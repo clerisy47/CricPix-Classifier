@@ -16,8 +16,10 @@ On Windows:
 venv\Scripts\activate
 '''
 
-On Linux or macOS:  
+On Linux or macOS: 
+''shell
 source venv/bin/activate
+'''
 
 Install the dependencies:  
 pip install -r requirements.txt
