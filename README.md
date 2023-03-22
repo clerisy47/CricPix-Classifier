@@ -36,7 +36,13 @@ Upload an image and the application will predict the face in the image using the
 
 * class_dictionary.json: This is the dictionary that maps the predicted class to a human-readable label.
 
+* static/image.png: This is the image which I used in my application.
+
 * templates/index.html: This is the HTML template that defines the layout of the web application.
+
+* test_images: This is the directories which contain test datasets for the classification.
+
+* data_acquisition/web_scraping.py: This is the python code which I used for web scrapping images from Google.
 
 # Credits
 * This project was created by Utsav Acharya.
