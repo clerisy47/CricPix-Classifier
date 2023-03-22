@@ -1,5 +1,5 @@
 # Cricketer-Image-Classification
-This is a Flask web application for image recognition using a machine learning model that has been trained to recognize Cricket Players. The application uses a combination of raw and wavelet transformed image features to make predictions. The model was trained using Scikit-learn, OpenCV, and PyWavelets libraries.
+This is a Flask web application for Image Recognition using a machine learning model selected with GridSearch CV that has been trained to recognize Cricket Players. The application uses a combination of raw and wavelet transformed image features to make predictions. The model was trained using Scikit-learn, OpenCV, and PyWavelets libraries.
 
 # Installation
 
@@ -46,6 +46,8 @@ Upload an image and the application will predict the face in the image using the
 * model.pkl: This is the pre-trained machine learning model.
 
 * class_dictionary.json: This is the dictionary that maps the predicted class to a human-readable label.
+
+* dataset: This directory contain the data used for training the model.
 
 * static/image.png: This is the image which I used in my application.
 
