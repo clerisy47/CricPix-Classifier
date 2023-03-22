@@ -21,9 +21,8 @@ Install the dependencies:
 pip install -r requirements.txt
 
 # Usage
-To run the application, navigate to the root folder and execute the following command:
+To run the application, navigate to the root folder and execute the following command:  
 python app.py
-
 Then, open a web browser and go to http://localhost:5000/.
 Upload an image and the application will predict the face in the image using the pre-trained machine learning model.
 
