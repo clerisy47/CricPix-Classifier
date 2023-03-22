@@ -3,9 +3,11 @@ This is a Flask web application for image recognition using a machine learning m
 
 # Installation
 
-Clone the repository and navigate to the root folder:  
+Clone the repository and navigate to the root folder:
+```terminal
 git clone https://github.com/yourusername/yourproject.git
 cd yourproject
+```
 
 Create a virtual environment: 
 ```terminal
@@ -49,7 +51,7 @@ Upload an image and the application will predict the face in the image using the
 
 * templates/index.html: This is the HTML template that defines the layout of the web application.
 
-* test_images: This is the directories which contain test datasets for the classification.
+* test_images: This is the directory which contain test datasets for the classification.
 
 * data_acquisition/web_scraping.py: This is the python code which I used for web scrapping images from Google.
 
