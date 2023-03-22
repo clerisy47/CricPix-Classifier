@@ -13,15 +13,15 @@ python3 -m venv venv
 Activate the virtual environment:  
 On Windows:  
 
-'''shell
+```shell
 venv\Scripts\activate
-'''
+```
 
 On Linux or macOS:
 
-''terminal
+```terminal
 source venv/bin/activate
-'''
+```
 
 Install the dependencies:  
 pip install -r requirements.txt
