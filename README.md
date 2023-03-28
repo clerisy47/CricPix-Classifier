@@ -57,6 +57,9 @@ Upload an image and the application will predict the face in the image using the
 
 * data_acquisition/web_scraping.py: This is the python code which I used for web scrapping images from Google.
 
+# License
+This project is protected by the MIT License. See the LICENSE file for more details.
+
 # Credits
 * This project was created by Utsav Acharya.
 * The face recognition model was trained webscrapping Google Images.
