@@ -1,5 +1,5 @@
-# Cricketer-Image-Classification
-This is a Flask web application for Image Recognition using a machine learning model selected with GridSearch CV that has been trained to recognize Cricket Players. The application uses a combination of raw and wavelet transformed image features to make predictions. The model was trained using Scikit-learn, OpenCV, and PyWavelets libraries.
+# CricPix-Classifier
+CricPix-Classifier, a Cricketer Image Classification app, is a Flask web application for Image Recognition using a machine learning model selected with GridSearch CV that has been trained to recognize Cricket Players. The application uses a combination of raw and wavelet transformed image features to make predictions. The model was trained using Scikit-learn, OpenCV, and PyWavelets libraries.
 
 # Installation
 
